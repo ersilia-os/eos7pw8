@@ -21,6 +21,12 @@ def load_model(framework_dir, checkpoints_dir):
     mdl.load(framework_dir, checkpoints_dir)
     return mdl
 
+def Float(x):
+    try:
+        return float(x)
+    except:
+        return None
+
 
 class Model(object):
     def __init__(self):
@@ -51,11 +57,10 @@ class Model(object):
         run_file = os.path.join(tmp_folder, self.RUN_FILE)
         with open(run_file, "w") as f:
             lines = [
-                "python {0}/run_cddd.py -i {1} -o {2} --smiles_header 'smiles' --model_dir {3}/default_model/".format(
+                "python {0}/predict.py {1} {2}".format(
                     self.framework_dir,
                     data_file,
-                    pred_file,
-                    self.checkpoints_dir
+                    pred_file
                 )
             ]
             f.write(os.linesep.join(lines))
@@ -69,15 +74,8 @@ class Model(object):
             h = next(reader)
             R = []
             for r in reader:
-                R += [{"embedding": [float(x) for x in r]}]
-        meta = {
-            "embedding": h
-        }
-        result = {
-            'result': R,
-            'meta': meta
-        }
-        return result
+                R += [{"score": Float(r[0])}]
+        return R
 
 
 class Artifact(BentoServiceArtifact):
