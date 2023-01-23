@@ -1,26 +1,40 @@
-# Synthetic accessibility score
+# Bayesian prediction of synthetic accessibility
 
-## Model Identifiers
-- Slug: syba-synthetic-accessibility
-- Ersilia ID: eos7pw8
-- Tags: synthesis,	physchem,	generative
+SYBA uses a fragment-based approach to classify whether a molecule is easy or hard to synthesize, and it can also be used to analyze the contribution of individual fragments to the total synthetic accessibility. The easy-to-synthesize dataset is an extract of the ZINC purchasable compounds, and the hard-to-synthesize dataset is generated using a Nonpher approach (introducing small molecular perturbations to transform molecules into more complex compounds). The fragments are calculated with ECFP8 descriptors, and independence between fragments is assumed.
 
-## Model Description
-Bayesian prediction of the synthetic accessibility score of organic compounds 
-- Input: SMILES
-- Output: SYBAScore	(Measure of the confidence of the prediction (higher values indicate higher confidence that the molecule is synthetically accessible))
-- Model type: Regression
-- Mode of Training: Pretrained
-- Training data: 693,353	(https://github.com/lich-uct/syba/tree/master/syba/resources)
-- Experimentally validated: No
+## Identifiers
 
-## Source code
-This model was published by Voršilák, M., Kolář, M., Čmelo, I. et al. SYBA: Bayesian estimation of synthetic accessibility of organic compounds. J Cheminform 12, 35 (2020). DOI: https://doi.org/10.1186/s13321-020-00439-2
-- Code: https://github.com/lich-uct/syba
-- Chedkpoints: https://github.com/lich-uct/syba/tree/master/bin
+* EOS model ID: `eos7pw8`
+* Slug: `syba-synthetic-accessibility`
+
+## Characteristics
+
+* Input: `Compound`
+* Input Shape: `Single`
+* Task: `Regression`
+* Output: `Score`
+* Output Type: `Float`
+* Output Shape: `Single`
+* Interpretation: Higher score indicates higher confidence that the molecule is synthetically available
+
+## References
+
+* [Publication](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-020-00439-2)
+* [Source Code](https://github.com/lich-uct/syba)
+* Ersilia contributor: [miquelduranfrigola](https://github.com/miquelduranfrigola)
+
+## Citation
+
+If you use this model, please cite the [original authors](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-020-00439-2) of the model and the [Ersilia Model Hub](https://github.com/ersilia-os/ersilia/blob/master/CITATION.cff).
 
 ## License
-The GPL-v3 license applies to all parts of the repository. This repository uses the externally maintained library "syba", located at `/model`
 
-## History
-- This model was downloaded and incorporated on October 25, 2021
+This package is licensed under a GPL-3.0 license. The model contained within this package is licensed under a GPL-3.0 license.
+
+Notice: Ersilia grants access to these models 'as is' provided by the original authors, please refer to the original code repository and/or publication if you use the model in your research.
+
+## About Us
+
+The [Ersilia Open Source Initiative](https://ersilia.io) is a Non Profit Organization ([1192266](https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/5170657/full-print)) with the mission is to equip labs, universities and clinics in LMIC with AI/ML tools for infectious disease research.
+
+[Help us](https://www.ersilia.io/donate) achieve our mission!
