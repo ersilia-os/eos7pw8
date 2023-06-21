@@ -25,6 +25,7 @@ SYBA uses a fragment-based approach to classify whether a molecule is easy or ha
 
 ## Ersilia model URLs
 * [GitHub](https://github.com/ersilia-os/eos7pw8)
+* [AWS S3](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos7pw8.zip)
 
 ## Citation
 
