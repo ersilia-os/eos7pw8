@@ -3,7 +3,7 @@ MAINTAINER ersilia
 
 
 RUN pip install rdkit==2023.03.1
-RUN conda install -c lich syba
+RUN conda install -c rdkit -c lich syba
 
 
 WORKDIR /repo
