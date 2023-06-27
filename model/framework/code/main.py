@@ -4,14 +4,14 @@ import sys
 import csv
 
 from rdkit import Chem
-from syba.syba import SybaClassifier
-
-syba = SybaClassifier()
-syba.fitDefaultScore()
+import joblib
+import sys
 
 # parse arguments
 input_file = sys.argv[1]
 output_file = sys.argv[2]
+
+root = os.path.dirname(os.path.abspath(__file__))
 
 
 # current file directory
@@ -24,18 +24,21 @@ with open(input_file, "r") as f:
     smiles_list = [r[0] for r in reader]
         
         
-def my_model(smiles):
+def my_model(smiles, model):
     preds = []
+    syba_model = joblib.load(model)
     for smi in smiles:
         mol = Chem.MolFromSmiles(smi)
         if mol is None:
             preds.append(None)
         else:
-            preds.append(syba.predict(mol=mol))
+            preds.append(syba_model.predict(mol=mol))
     return preds
 
 # run model
-outputs = my_model(smiles_list)
+
+model = os.path.join(root, "..", "..", "checkpoints", "syba.joblib")
+outputs = my_model(smiles_list, model)
 
 #check input and output have the same lenght
 input_len = len(smiles_list)
