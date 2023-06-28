@@ -2,20 +2,20 @@
 import os
 import sys
 import csv
-
 from rdkit import Chem
 import joblib
-import sys
+
+import pathlib 
+
+
+
 
 # parse arguments
 input_file = sys.argv[1]
 output_file = sys.argv[2]
 
-root = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join( pathlib.Path(os.path.dirname(os.path.abspath(__file__))).parent.parent ,'checkpoints', 'syba.joblib')
 
-
-# current file directory
-root = os.path.dirname(os.path.abspath(__file__))
 
 # read SMILES from .csv file, assuming one column with header
 with open(input_file, "r") as f:
@@ -35,10 +35,9 @@ def my_model(smiles, model):
             preds.append(syba_model.predict(mol=mol))
     return preds
 
-# run model
+#run model
 
-model = os.path.join(root, "..", "..", "checkpoints", "syba.joblib")
-outputs = my_model(smiles_list, model)
+outputs = my_model(smiles_list, model_path)
 
 #check input and output have the same lenght
 input_len = len(smiles_list)
