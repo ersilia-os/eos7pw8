@@ -27,16 +27,18 @@ def my_model(smiles,model):
     preds = []
     try:
         syba_model = joblib.load(model)
+        for smi in smiles:
+            mol = Chem.MolFromSmiles(smi)
+            if mol is None:
+                preds.append(None)
+            else:
+                preds.append(syba_model.predict(mol=mol))
+        return preds
     except Exception as e:
         print(f"Error occurred while loading the model: {str(e)}")
+        sys.exit(0)
 
-    for smi in smiles:
-        mol = Chem.MolFromSmiles(smi)
-        if mol is None:
-            preds.append(None)
-        else:
-            preds.append(syba_model.predict(mol=mol))
-    return preds
+   
 
 outputs = my_model(smiles_list, model_path)
 
