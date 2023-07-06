@@ -22,20 +22,23 @@ with open(input_file, "r") as f:
     reader = csv.reader(f)
     next(reader)  # skip header
     smiles_list = [r[0] for r in reader]
-        
-        
-def my_model(smiles, model):
-    preds = []
-    syba_model = joblib.load(model)
-    for smi in smiles:
-        mol = Chem.MolFromSmiles(smi)
-        if mol is None:
-            preds.append(None)
-        else:
-            preds.append(syba_model.predict(mol=mol))
-    return preds
 
-#run model
+def my_model(smiles,model):
+    preds = []
+    try:
+        syba_model = joblib.load(model)
+        for smi in smiles:
+            mol = Chem.MolFromSmiles(smi)
+            if mol is None:
+                preds.append(None)
+            else:
+                preds.append(syba_model.predict(mol=mol))
+        return preds
+    except Exception as e:
+        print(f"Error occurred while loading the model: {str(e)}")
+        sys.exit(0)
+
+   
 
 outputs = my_model(smiles_list, model_path)
 
@@ -47,6 +50,7 @@ assert input_len == output_len
 # write output in a .csv file
 with open(output_file, "w") as f:
     writer = csv.writer(f)
-    writer.writerow(["value"])  # header
+    writer.writerow(["sy_sa"])  # header
     for o in outputs:
         writer.writerow([o])
+
