@@ -4,7 +4,7 @@ MAINTAINER ersilia
 
 RUN pip install rdkit==2023.03.1
 RUN pip install joblib
-RUN conda install -c rdkit -c lich syba
+RUN 
 
 
 WORKDIR /repo
