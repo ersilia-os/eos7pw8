@@ -3,9 +3,7 @@ MAINTAINER ersilia
 
 RUN pip install rdkit==2023.03.1
 RUN pip install joblib
-RUN unzip model/checkpoints/syba-master.zip && cd syba-master
-RUN python setup.py install
-RUN rm -rf syba-master
+RUN conda install model/checkpoints/syba-1.0.2.alpha-py_0.tar.bz2
 
 WORKDIR /repo
 COPY ./repo
