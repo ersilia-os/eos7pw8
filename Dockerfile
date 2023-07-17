@@ -7,4 +7,4 @@ RUN wget https://anaconda.org/LICH/syba/1.0.2.alpha/download/noarch/syba-1.0.2.a
 RUN conda install syba-1.0.2.alpha-py_0.tar.bz2
 RUN rm -rf syba-1.0.2.alpha-py_0.tar.bz2
 WORKDIR /repo
-COPY ./repo
+COPY . /repo
