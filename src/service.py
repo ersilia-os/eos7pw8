@@ -90,9 +90,9 @@ class Model(object):
             R = []
             for r in reader:
                 R += [
-                    {"outcome": [Float(x) for x in r]}
+                    {"sy_sa": Float(r[0])}
                 ]  # <-- EDIT: Modify according to type of output (Float, String...)
-        meta = {"outcome": h}
+        meta = {"sy_sa": h}
         result = {"result": R, "meta": meta}
         shutil.rmtree(tmp_folder)
         return result
