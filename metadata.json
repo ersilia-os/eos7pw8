@@ -33,5 +33,6 @@
     "Docker Architecture": [
         "AMD64",
         "ARM64"
-    ]
+    ],
+    "Memory Gb": 16
 }
