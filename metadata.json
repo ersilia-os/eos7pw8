@@ -4,34 +4,43 @@
     "Status": "Ready",
     "Title": "Bayesian prediction of synthetic accessibility",
     "Description": "SYBA uses a fragment-based approach to classify whether a molecule is easy or hard to synthesize, and it can also be used to analyze the contribution of individual fragments to the total synthetic accessibility. The easy-to-synthesize dataset is an extract of the ZINC purchasable compounds, and the hard-to-synthesize dataset is generated using a Nonpher approach (introducing small molecular perturbations to transform molecules into more complex compounds). The fragments are calculated with ECFP8 descriptors, and independence between fragments is assumed.\n",
-    "Mode": "Pretrained",
+    "Source": "Local",
+    "Source Type": "External",
     "Input": [
         "Compound"
     ],
-    "Input Shape": "Single",
-    "Task": [
-        "Regression"
+    "Input Dimension": 1,
+    "Task": "Annotation",
+    "Subtask": "Property calculation or prediction",
+    "Biomedical Area": [
+        "Any"
+    ],
+    "Target Organism": [
+        "Not Applicable"
     ],
     "Output": [
         "Score"
     ],
-    "Output Type": [
-        "Float"
-    ],
-    "Output Shape": "Single",
+    "Output Dimension": 1,
+    "Output Consistency": "Fixed",
     "Interpretation": "Higher score indicates higher confidence that the molecule is synthetically available",
     "Tag": [
         "Synthetic accessibility",
         "Chemical synthesis"
     ],
     "Publication": "https://jcheminf.biomedcentral.com/articles/10.1186/s13321-020-00439-2",
+    "Publication Type": "Peer reviewed",
+    "Publication Year": 2020,
     "Source Code": "https://github.com/lich-uct/syba",
-    "License": "GPL-3.0",
+    "License": "GPL-3.0-only",
     "Contributor": "miquelduranfrigola",
-    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos7pw8.zip",
+    "Incorporation Date": "2021-10-25",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos7pw8",
     "Docker Architecture": [
         "AMD64"
     ],
-    "Memory Gb": 16
+    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos7pw8.zip",
+    "Deployment": [
+        "Local"
+    ]
 }
