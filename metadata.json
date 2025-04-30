@@ -42,5 +42,7 @@
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos7pw8",
     "Docker Architecture": [
         "AMD64"
-    ]
+    ],
+    "Model Size": 757.0,
+    "Environment Size": 576.0
 }
