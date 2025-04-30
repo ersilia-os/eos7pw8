@@ -3,21 +3,18 @@
     "Slug": "syba-synthetic-accessibility",
     "Status": "Ready",
     "Title": "Bayesian prediction of synthetic accessibility",
-    "Description": "SYBA uses a fragment-based approach to classify whether a molecule is easy or hard to synthesize, and it can also be used to analyze the contribution of individual fragments to the total synthetic accessibility. The easy-to-synthesize dataset is an extract of the ZINC purchasable compounds, and the hard-to-synthesize dataset is generated using a Nonpher approach (introducing small molecular perturbations to transform molecules into more complex compounds). The fragments are calculated with ECFP8 descriptors, and independence between fragments is assumed.\n",
+    "Description": "SYBA uses a fragment-based approach to classify whether a molecule is easy or hard to synthesize, and it can also be used to analyze the contribution of individual fragments to the total synthetic accessibility. The easy-to-synthesize dataset is an extract of the ZINC purchasable compounds, and the hard-to-synthesize dataset is generated using a Nonpher approach (introducing small molecular perturbations to transform molecules into more complex compounds). The fragments are calculated with ECFP8 descriptors, and independence between fragments is assumed.",
+    "Deployment": [
+        "Local"
+    ],
     "Source": "Local",
     "Source Type": "External",
+    "Task": "Annotation",
+    "Subtask": "Property calculation or prediction",
     "Input": [
         "Compound"
     ],
     "Input Dimension": 1,
-    "Task": "Annotation",
-    "Subtask": "Property calculation or prediction",
-    "Biomedical Area": [
-        "Any"
-    ],
-    "Target Organism": [
-        "Not Applicable"
-    ],
     "Output": [
         "Score"
     ],
@@ -28,19 +25,22 @@
         "Synthetic accessibility",
         "Chemical synthesis"
     ],
-    "Publication": "https://jcheminf.biomedcentral.com/articles/10.1186/s13321-020-00439-2",
+    "Biomedical Area": [
+        "Any"
+    ],
+    "Target Organism": [
+        "Not Applicable"
+    ],
     "Publication Type": "Peer reviewed",
     "Publication Year": 2020,
+    "Publication": "https://jcheminf.biomedcentral.com/articles/10.1186/s13321-020-00439-2",
     "Source Code": "https://github.com/lich-uct/syba",
     "License": "GPL-3.0-only",
     "Contributor": "miquelduranfrigola",
     "Incorporation Date": "2021-10-25",
+    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos7pw8.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos7pw8",
     "Docker Architecture": [
         "AMD64"
-    ],
-    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos7pw8.zip",
-    "Deployment": [
-        "Local"
     ]
 }
