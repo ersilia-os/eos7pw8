@@ -35,12 +35,13 @@ Below are the **Output Columns** of the model:
 - **Source:** `Local`
 - **Source Type:** `External`
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos7pw8](https://hub.docker.com/r/ersiliaos/eos7pw8)
-- **Docker Architecture:** `AMD64`
+- **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos7pw8.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos7pw8.zip)
 
 ### Resource Consumption
 - **Model Size (Mb):** `757`
 - **Environment Size (Mb):** `576`
+- **Image Size (Mb):** `2032.01`
 
 
 ### References
