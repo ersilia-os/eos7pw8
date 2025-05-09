@@ -46,5 +46,10 @@
     ],
     "Model Size": 757.0,
     "Environment Size": 577.0,
-    "Image Size": 2032.01
+    "Image Size": 2032.79,
+    "Computational Performance 1": 272.85,
+    "Computational Performance 2": 260.5,
+    "Computational Performance 3": 256.59,
+    "Computational Performance 4": -1.0,
+    "Computational Performance 5": -1.0
 }
