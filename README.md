@@ -41,8 +41,12 @@ Below are the **Output Columns** of the model:
 ### Resource Consumption
 - **Model Size (Mb):** `757`
 - **Environment Size (Mb):** `577`
-- **Image Size (Mb):** `2032.01`
+- **Image Size (Mb):** `2032.79`
 
+**Computational Performance (seconds):**
+- 10 inputs: `272.85`
+- 100 inputs: `256.59`
+- 10000 inputs: `-1`
 
 ### References
 - **Source Code**: [https://github.com/lich-uct/syba](https://github.com/lich-uct/syba)
