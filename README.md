@@ -4,6 +4,7 @@ SYBA uses a fragment-based approach to classify whether a molecule is easy or ha
 
 This model was incorporated on 2021-10-25.
 
+
 ## Information
 ### Identifiers
 - **Ersilia Identifier:** `eos7pw8`
@@ -13,7 +14,7 @@ This model was incorporated on 2021-10-25.
 - **Task:** `Annotation`
 - **Subtask:** `Property calculation or prediction`
 - **Biomedical Area:** `Any`
-- **Target Organism:** `Not Applicable`
+- **Target Organism:** `Any`
 - **Tags:** `Synthetic accessibility`, `Chemical synthesis`
 
 ### Input
