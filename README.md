@@ -2,8 +2,7 @@
 
 SYBA uses a fragment-based approach to classify whether a molecule is easy or hard to synthesize, and it can also be used to analyze the contribution of individual fragments to the total synthetic accessibility. The easy-to-synthesize dataset is an extract of the ZINC purchasable compounds, and the hard-to-synthesize dataset is generated using a Nonpher approach (introducing small molecular perturbations to transform molecules into more complex compounds). The fragments are calculated with ECFP8 descriptors, and independence between fragments is assumed.
 
-This model was incorporated on 2021-10-25.
-
+This model was incorporated on 2021-10-25.Last packaged on 2025-10-13.
 
 ## Information
 ### Identifiers
@@ -42,11 +41,11 @@ Below are the **Output Columns** of the model:
 ### Resource Consumption
 - **Model Size (Mb):** `757`
 - **Environment Size (Mb):** `1213`
-- **Image Size (Mb):** `2032.79`
+- **Image Size (Mb):** `1875.75`
 
 **Computational Performance (seconds):**
-- 10 inputs: `272.85`
-- 100 inputs: `256.59`
+- 10 inputs: `104.09`
+- 100 inputs: `92.72`
 - 10000 inputs: `-1`
 
 ### References
