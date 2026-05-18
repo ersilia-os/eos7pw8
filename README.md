@@ -50,7 +50,7 @@ Below are the **Output Columns** of the model:
 
 ### References
 - **Source Code**: [https://github.com/lich-uct/syba](https://github.com/lich-uct/syba)
-- **Publication**: [https://jcheminf.biomedcentral.com/articles/10.1186/s13321-020-00439-2](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-020-00439-2)
+- **Publication**: [https://doi.org/10.1186/s13321-020-00439-2](https://doi.org/10.1186/s13321-020-00439-2)
 - **Publication Type:** `Peer reviewed`
 - **Publication Year:** `2020`
 - **Ersilia Contributor:** [miquelduranfrigola](https://github.com/miquelduranfrigola)
