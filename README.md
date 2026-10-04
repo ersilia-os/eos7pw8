@@ -1,6 +1,6 @@
 # Bayesian prediction of synthetic accessibility
 
-SYBA uses a fragment-based approach to classify whether a molecule is easy or hard to synthesize, and it can also be used to analyze the contribution of individual fragments to the total synthetic accessibility. The easy-to-synthesize dataset is an extract of the ZINC purchasable compounds, and the hard-to-synthesize dataset is generated using a Nonpher approach (introducing small molecular perturbations to transform molecules into more complex compounds). The fragments are calculated with ECFP8 descriptors, and independence between fragments is assumed.
+Judges how readily a compound could be made, using SYBA, a Bayesian scheme from Vorsilak and colleagues. Rather than fitting a model, it compares how often each molecular fragment appears among easy-to-synthesise compounds versus deliberately generated hard ones, and sums the resulting log-odds. The approach is transparent and fast, since the score decomposes into fragment contributions, but it reflects the fragment statistics of the reference sets rather than any explicit route search.
 
 This model was incorporated on 2021-10-25.Last packaged on 2025-10-13.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2021-10-25.Last packaged on 2025-10-13.
 ### Output
 - **Output Dimension:** `1`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** Higher score indicates higher confidence that the molecule is synthetically available
+- **Interpretation:** Synthetic accessibility score where higher values indicate an easier-to-synthesise compound.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
