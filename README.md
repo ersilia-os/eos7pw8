@@ -1,6 +1,6 @@
 # Bayesian prediction of synthetic accessibility
 
-Judges how readily a compound could be made, using SYBA, a Bayesian scheme from Vorsilak and colleagues. Rather than fitting a model, it compares how often each molecular fragment appears among easy-to-synthesise compounds versus deliberately generated hard ones, and sums the resulting log-odds. The approach is transparent and fast, since the score decomposes into fragment contributions, but it reflects the fragment statistics of the reference sets rather than any explicit route search.
+Judges how readily a compound could be made, using SYBA, a Bernoulli naive Bayes scheme from Vorsilak and colleagues. Fragment log-odds come from 693,353 easy-to-synthesise molecules drawn from ZINC15 and an equal number of hard ones built by Nonpher, which morphs structures into deliberately awkward analogues. Fragments are ECFP8 environments assumed to be independent, so the score decomposes into per-fragment contributions, but it reflects the statistics of those reference sets rather than any route search.
 
 This model was incorporated on 2021-10-25.Last packaged on 2025-10-13.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2021-10-25.Last packaged on 2025-10-13.
 ### Output
 - **Output Dimension:** `1`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** Synthetic accessibility score where higher values indicate an easier-to-synthesise compound.
+- **Interpretation:** Log-odds synthetic accessibility score, positive for easy-to-synthesise compounds and negative for hard-to-synthesise ones.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
