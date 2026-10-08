@@ -38,7 +38,7 @@
     "License": "GPL-3.0-only",
     "Contributor": "miquelduranfrigola",
     "Incorporation Date": "2021-10-25",
-    "Last Packaging Date": "2025-10-13",
+    "Last Packaging Date": "2026-10-08",
     "Release": "v1.0.0",
     "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos7pw8.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos7pw8",
@@ -48,10 +48,10 @@
     ],
     "Model Size": 304.0,
     "Environment Size": 1046.0,
-    "Image Size": 1875.75,
-    "Computational Performance 1": 104.09,
-    "Computational Performance 2": 93.43,
-    "Computational Performance 3": 92.72,
-    "Computational Performance 4": 780.83,
-    "Computational Performance 5": -1.0
+    "Image Size": 1277.77,
+    "Computational Performance 1": 26.51,
+    "Computational Performance 2": 17.6,
+    "Computational Performance 3": 16.64,
+    "Computational Performance 4": 18.57,
+    "Computational Performance 5": 27.27
 }
