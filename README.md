@@ -2,7 +2,7 @@
 
 Judges how readily a compound could be made, using SYBA, a Bernoulli naive Bayes scheme from Vorsilak and colleagues. Fragment log-odds come from 693,353 easy-to-synthesise molecules drawn from ZINC15 and an equal number of hard ones built by Nonpher, which morphs structures into deliberately awkward analogues. Fragments are ECFP8 environments assumed to be independent, so the score decomposes into per-fragment contributions, but it reflects the statistics of those reference sets rather than any route search.
 
-This model was incorporated on 2021-10-25.Last packaged on 2025-10-13.
+This model was incorporated on 2021-10-25.Last packaged on 2026-10-08.
 
 ## Information
 ### Identifiers
@@ -41,12 +41,12 @@ Below are the **Output Columns** of the model:
 ### Resource Consumption
 - **Model Size (Mb):** `304`
 - **Environment Size (Mb):** `1046`
-- **Image Size (Mb):** `1875.75`
+- **Image Size (Mb):** `1277.77`
 
 **Computational Performance (seconds):**
-- 10 inputs: `104.09`
-- 100 inputs: `92.72`
-- 10000 inputs: `-1`
+- 10 inputs: `26.51`
+- 100 inputs: `16.64`
+- 10000 inputs: `27.27`
 
 ### References
 - **Source Code**: [https://github.com/lich-uct/syba](https://github.com/lich-uct/syba)
