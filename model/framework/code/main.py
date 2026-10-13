@@ -57,20 +57,22 @@ def syba_predict(mol, table):
 
 
 def my_model(smiles,model):
+    # a loading failure is not caught: it raises and the run exits non-zero
+    with np.load(model) as data:
+        table = {name: data[name] for name in data.files}
     preds = []
-    try:
-        with np.load(model) as data:
-            table = {name: data[name] for name in data.files}
-        for smi in smiles:
+    for smi in smiles:
+        # a failure on one molecule gives an empty cell, not a lost batch
+        try:
             mol = Chem.MolFromSmiles(smi)
             if mol is None:
                 preds.append(None)
             else:
                 preds.append(syba_predict(mol, table))
-        return preds
-    except Exception as e:
-        print(f"Error occurred while loading the model: {str(e)}")
-        sys.exit(0)
+        except Exception as e:
+            print(f"Could not score {smi}: {str(e)}", file=sys.stderr)
+            preds.append(None)
+    return preds
 
 
 
