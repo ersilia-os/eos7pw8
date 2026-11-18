@@ -2,7 +2,8 @@
 
 Judges how readily a compound could be made, using SYBA, a Bernoulli naive Bayes scheme from Vorsilak and colleagues. Fragment log-odds come from 693,353 easy-to-synthesise molecules drawn from ZINC15 and an equal number of hard ones built by Nonpher, which morphs structures into deliberately awkward analogues. Fragments are ECFP8 environments assumed to be independent, so the score decomposes into per-fragment contributions, but it reflects the statistics of those reference sets rather than any route search.
 
-This model was incorporated on 2021-10-25.Last packaged on 2026-10-13.
+This model was incorporated on 2021-10-25.
+Last packaged on 2026-10-13.
 
 ## Information
 ### Identifiers
@@ -37,6 +38,7 @@ Below are the **Output Columns** of the model:
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos7pw8](https://hub.docker.com/r/ersiliaos/eos7pw8)
 - **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos7pw8.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos7pw8.zip)
+- **Apptainer**: [https://models-sif.s3.eu-north-1.amazonaws.com/eos7pw8_v1.sif](https://models-sif.s3.eu-north-1.amazonaws.com/eos7pw8_v1.sif)
 
 ### Resource Consumption
 - **Model Size (Mb):** `153`
